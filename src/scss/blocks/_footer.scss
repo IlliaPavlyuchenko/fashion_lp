@@ -1,0 +1,57 @@
+@use './helpers/abstracts' as *;
+
+.footer {
+	background-color: $color_black;
+	color: $color_text;
+	padding: 12.5rem 6rem;
+	&__in {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__col {
+		max-width: 41.5rem;
+		gap: 3.2rem;
+		display: flex;
+		flex-direction: column;
+	}
+	&__col_2 {
+		display: flex;
+		gap: 18.8rem;
+	}
+	&__title {
+		color: $color_white;
+		font-size: 4rem;
+		font-weight: 900;
+		&--s {
+			font-family: $font_2;
+			font-size: 2.4rem;
+			font-weight: 400;
+			color: $color_text2;
+		}
+	}
+	&__descr {
+		font-family: $font_2;
+		font-size: 2.4rem;
+		line-height: 4rem;
+	}
+	&__socials {
+		display: flex;
+		gap: 1.4rem;
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 3.4rem;
+	}
+	&__list {
+		font-family: $font_2;
+		font-size: 2.4rem;
+		display: flex;
+		flex-direction: column;
+		gap: 3.2rem;
+		& a {
+			text-decoration: none;
+			color: $color_text;
+		}
+	}
+}

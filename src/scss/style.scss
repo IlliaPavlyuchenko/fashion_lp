@@ -1,3 +1,7 @@
 @use './helpers/reset';
-@use './fonts';
+//@use './fonts';
 @use './base';
+
+//blocks
+@use './blocks/header';
+@use './blocks/footer';
