@@ -33,6 +33,35 @@ body {
 	width: 100%;
 }
 
+.section__title {
+	font-size: 4.8rem;
+	font-weight: 900;
+	line-height: 5rem;
+	letter-spacing: 0.25rem;
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+	&::after {
+		content: '';
+		position: absolute;
+
+		top: 50%;
+		left: 50%;
+		transform: translate(0, -10%);
+
+		width: 18.6rem;
+		height: 3.5rem;
+
+		background-image: url('/imgs/title_decor.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+
+		z-index: -1;
+	}
+}
+
 .container {
 	max-width: 192rem;
 	padding: 0;
@@ -47,6 +76,15 @@ body {
 	&.container--v3 {
 		max-width: 164rem;
 		padding: 0 2rem;
+	}
+
+	&.container--bg {
+		background: linear-gradient(
+			0deg,
+			rgba(224, 195, 64, 1) 0%,
+			rgba(237, 206, 73, 1) 50%,
+			rgba(249, 223, 86, 1) 100%
+		);
 	}
 }
 
