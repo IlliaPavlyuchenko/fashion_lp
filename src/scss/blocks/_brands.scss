@@ -1,0 +1,14 @@
+@use './helpers/abstracts' as *;
+
+.brands {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5.5rem;
+	column-gap: 12.1rem;
+	background-color: $color_yellow;
+	width: 100%;
+	padding: 6.1rem 0 5.5rem;
+	flex-wrap: wrap;
+	row-gap: 4rem;
+}
