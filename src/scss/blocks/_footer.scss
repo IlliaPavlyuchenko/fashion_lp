@@ -3,7 +3,7 @@
 .footer {
 	background-color: $color_black;
 	color: $color_text;
-	padding: 12.5rem 6rem;
+	padding: 12.5rem 10rem;
 	&__in {
 		display: flex;
 		justify-content: space-between;
@@ -37,6 +37,10 @@
 	&__socials {
 		display: flex;
 		gap: 1.4rem;
+		& img {
+			width: 5.2rem;
+			height: 5.2rem;
+		}
 	}
 	&__info {
 		display: flex;
