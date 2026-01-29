@@ -45,7 +45,6 @@ body {
 }
 
 .section__title {
-	font-size: 4.8rem;
 	font-weight: 900;
 	line-height: 5rem;
 	letter-spacing: 0.25rem;
@@ -53,6 +52,13 @@ body {
 	position: relative;
 	display: inline-block;
 	z-index: 1;
+	@include bp($point_2, min) {
+		font-size: 4.8rem;
+	}
+
+	@include bp($point_3) {
+		font-size: 3rem;
+	}
 	&.section__title--v2 {
 		text-transform: capitalize;
 	}

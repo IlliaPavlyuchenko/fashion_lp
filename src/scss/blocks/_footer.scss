@@ -7,6 +7,9 @@
 	&__in {
 		display: flex;
 		justify-content: space-between;
+		@include bp($point_3) {
+			flex-direction: column;
+		}
 	}
 	&__col {
 		max-width: 41.5rem;
@@ -16,12 +19,25 @@
 	}
 	&__col_2 {
 		display: flex;
-		gap: 18.8rem;
+		@include bp($point_2, min) {
+			gap: 18.8rem;
+		}
+
+		@include bp($point_3) {
+			gap: 1.8rem;
+			flex-direction: column;
+		}
 	}
 	&__title {
 		color: $color_white;
-		font-size: 4rem;
 		font-weight: 900;
+		@include bp($point_2, min) {
+			font-size: 4rem;
+		}
+
+		@include bp($point_3) {
+			font-size: 3.4rem;
+		}
 		&--s {
 			font-family: $font_2;
 			font-size: 2.4rem;

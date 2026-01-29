@@ -9,23 +9,36 @@
 	justify-content: center;
 	align-items: center;
 	&__title {
-		font-size: 5.5rem;
 		font-weight: 900;
-		line-height: 7rem;
 		letter-spacing: 0.26rem;
 		text-transform: uppercase;
 		margin-bottom: 1.1rem;
 		max-width: 96.6rem;
 		text-align: center;
 		color: $color_white;
+		@include bp($point_2, min) {
+			font-size: 5.5rem;
+			line-height: 7rem;
+		}
+
+		@include bp($point_3) {
+			font-size: 3rem;
+			line-height: 5rem;
+		}
 	}
 	&__subtitle {
-		font-size: 3.2rem;
 		font-weight: 400;
 		color: #fffcf8;
 		letter-spacing: 0.12rem;
 		margin-bottom: 3.9rem;
 		color: #fffcf8;
+		@include bp($point_2, min) {
+			font-size: 3.2rem;
+		}
+
+		@include bp($point_3) {
+			font-size: 2.5rem;
+		}
 	}
 }
 
@@ -35,17 +48,32 @@
 	background-color: $color_white;
 	padding: 1rem;
 	border-radius: 1rem;
-	max-width: 57.4rem;
+	//max-width: 57.4rem;
 	width: 100%;
+	@include bp($point_2, min) {
+		max-width: 57.4rem;
+	}
+
+	@include bp($point_3) {
+		max-width: 36rem;
+	}
 
 	&__input {
 		flex-grow: 1;
 		border: none;
 		outline: none;
-		padding: 1.7rem 2rem;
 		font-weight: 400;
 		font-size: 2.4rem;
 		color: $color_black;
+		@include bp($point_2, min) {
+			padding: 1.7rem 2rem;
+			font-size: 2.4rem;
+		}
+
+		@include bp($point_3) {
+			padding: 1.7rem 0;
+			font-size: 2rem;
+		}
 
 		&::placeholder {
 			color: $color_text3;
@@ -57,11 +85,20 @@
 		color: $color_white;
 		border: none;
 		border-radius: 0.8rem;
-		padding: 1.6rem 3.6rem;
+		//padding: 1.6rem 3.6rem;
 		font-weight: 500;
-		font-size: 3.3rem;
+		//font-size: 3.3rem;
 		cursor: pointer;
 		transition: all $transition_dur ease-in-out;
+		@include bp($point_2, min) {
+			padding: 1.6rem 3.6rem;
+			font-size: 3.3rem;
+		}
+
+		@include bp($point_3) {
+			padding: 1.6rem 1.4rem;
+			font-size: 2rem;
+		}
 
 		&:hover {
 			opacity: 0.8;

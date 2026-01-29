@@ -1,18 +1,36 @@
 @use './helpers/abstracts' as *;
 
 .favourite {
-	margin-top: 19rem;
+	@include bp($point_2, min) {
+		margin-top: 19rem;
+	}
+	@include bp($point_3) {
+		margin-top: 10rem;
+	}
 	&__cards {
 		display: flex;
-		justify-content: space-between;
+		//justify-content: space-between;
 		margin-top: 10.4rem;
 		gap: 2rem;
+		@include bp($point_2, min) {
+			justify-content: space-between;
+		}
+		@include bp($point_3) {
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 	&__card {
 		display: flex;
 		flex-direction: column;
-		width: calc(100% / 2);
+		//width: calc(100% / 2);
 		max-width: 83.5rem;
 		justify-content: center;
+		@include bp($point_2, min) {
+			width: calc(100% / 2);
+		}
+		@include bp($point_3) {
+			width: 100%;
+		}
 	}
 }

@@ -7,14 +7,23 @@
 	margin-top: 13rem;
 	padding: 0;
 	gap: 3rem;
+	@include bp($point_3) {
+		flex-direction: column;
+	}
 	&__title {
-		font-size: 4.8rem;
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.26rem;
 		text-transform: uppercase;
 		margin-bottom: 4rem;
 		max-width: 50.7rem;
+		@include bp($point_2, min) {
+			font-size: 4.8rem;
+		}
+
+		@include bp($point_3) {
+			font-size: 3rem;
+		}
 	}
 	&__subtitle {
 		font-size: 2.4rem;
@@ -26,10 +35,21 @@
 	&__btns {
 		display: flex;
 		gap: 1.9rem;
+		@include bp($point_3) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__img_w {
 		max-width: 67.1rem;
-		height: 88rem;
+		//height: 88rem;
+		@include bp($point_2, min) {
+			height: 88rem;
+		}
+
+		@include bp($point_3) {
+			height: auto;
+		}
 	}
 	&__img {
 		width: 100%;

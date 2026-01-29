@@ -8,9 +8,15 @@
 	align-items: center;
 	&__title {
 		text-align: center;
-		font-size: 4.8rem;
-		font-weight: 700;
+		font-weight: 900;
 		margin-bottom: 4rem;
+		@include bp($point_2, min) {
+			font-size: 4.8rem;
+		}
+
+		@include bp($point_3) {
+			font-size: 3rem;
+		}
 	}
 }
 
