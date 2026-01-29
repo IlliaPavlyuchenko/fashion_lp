@@ -1,0 +1,104 @@
+@use './helpers/abstracts' as *;
+
+.faqs {
+	margin-top: 13rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__title {
+		text-align: center;
+		font-size: 4.8rem;
+		font-weight: 700;
+		margin-bottom: 4rem;
+	}
+}
+
+.accordion {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 3.2rem;
+		width: 100%;
+	}
+
+	&__item {
+		border: 1px solid $color_text;
+        border-radius: 1rem;
+
+        &:hover {
+            box-shadow: 0px 0px 20px $color_text2;
+        }
+
+		@include bp($point_2, min) {
+			padding: 2rem;
+		}
+
+		@include bp($point_3) {
+			padding: 1.5rem;
+		}
+	}
+
+	&__title {
+		height: 6rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 1rem;
+
+		cursor: pointer;
+	}
+
+	&__title_text {
+		line-height: 1.1;
+
+		@include bp($point_2, min) {
+			font-size: 3.2rem;
+		}
+
+		@include bp($point_3) {
+			font-size: 2.1rem;
+		}
+	}
+
+	&__title_btn {
+		display: inline-block;
+		height: 2rem;
+		min-width: 4rem;
+		background-image: url(../imgs/faq_arrow.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+        transition: all $transition_dur ease-in-out;
+	}
+
+	&__title.active span {
+		transform: rotate(180deg);
+	}
+
+	&__content {
+		font-weight: 400;
+		color: $color_text3;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		height: 0;
+
+		@include bp($point_2, min) {
+			font-size: 2.7rem;
+		}
+
+		@include bp($point_3) {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__title.active + .accordion__content {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		height: auto;
+		padding-top: 3rem;
+		transition: all 0.3s ease-in-out;
+	}
+}
